@@ -2,12 +2,15 @@ package ar.com.lanube.parsingjson_mercadolibre.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.List;
 
 import ar.com.lanube.parsingjson_mercadolibre.R;
 import ar.com.lanube.parsingjson_mercadolibre.controller.MercadoLibreController;
 import ar.com.lanube.parsingjson_mercadolibre.model.MercadoLibreContainer;
+import ar.com.lanube.parsingjson_mercadolibre.util.ResultListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,11 +23,20 @@ public class MainActivity extends AppCompatActivity {
     public void clickMercadoLibreData (View view) {
 
         MercadoLibreController controller = new MercadoLibreController();
-        MercadoLibreContainer mercadoLibreContainer = controller.getMercadoLibreData(this);
 
-        String data = mercadoLibreContainer.toString();
+        controller.getMercadoLibreData(new ResultListener<List<MercadoLibreContainer>>(){
 
-        Log.d("INFO MERCADOLIBRE DATA!", data);
+            @Override
+            public void finish(List<MercadoLibreContainer> resultado) {
+                Toast.makeText(MainActivity.this, resultado.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+/*        String data = mercadoLibreContainer.toString();
+
+        Log.d("INFO MERCADOLIBRE DATA!", data);*/
 
     }
 

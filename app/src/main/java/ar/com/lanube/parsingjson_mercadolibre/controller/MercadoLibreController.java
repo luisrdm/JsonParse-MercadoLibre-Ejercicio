@@ -1,19 +1,25 @@
 package ar.com.lanube.parsingjson_mercadolibre.controller;
 
-import android.content.Context;
+import java.util.List;
 
 import ar.com.lanube.parsingjson_mercadolibre.dao.MercadoLibreDAO;
 import ar.com.lanube.parsingjson_mercadolibre.model.MercadoLibreContainer;
+import ar.com.lanube.parsingjson_mercadolibre.util.ResultListener;
 
 /**
  * Created by izu on 09/06/2016.
  */
 public class MercadoLibreController {
 
-    MercadoLibreDAO dao = new MercadoLibreDAO();
+    public void getMercadoLibreData (final ResultListener<List<MercadoLibreContainer>> listener){
+        MercadoLibreDAO dao = new MercadoLibreDAO();
 
-    public MercadoLibreContainer getMercadoLibreData (Context context){
-        MercadoLibreContainer mercadoLibreContainer = dao.getMercadoLibreData(context);
-        return mercadoLibreContainer;
+        dao.getMercadoLibreData(new ResultListener<List<MercadoLibreContainer>>(){
+
+            @Override
+            public void finish(List<MercadoLibreContainer> result) {
+                listener.finish(result);
+            }
+        });
     }
 }
