@@ -15,7 +15,7 @@ public class MercadoLibreContainer {
         return "MercadoLibreContainer{" +
                 "site_id=" + site_id +
                 ", paging=" + paging +
-            //    ", results=" + results +
+                ", results=" + results +
                 '}';
     }
 }

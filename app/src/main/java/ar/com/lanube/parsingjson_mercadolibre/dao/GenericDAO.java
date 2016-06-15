@@ -2,6 +2,7 @@ package ar.com.lanube.parsingjson_mercadolibre.dao;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.util.Log;
 
 import com.google.gson.Gson;
 

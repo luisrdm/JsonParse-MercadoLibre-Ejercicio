@@ -8,7 +8,7 @@ import java.util.List;
 public class Attributes {
     List<String> attributes;
 
-    @Override
+/*    @Override
     public String toString() {
         
         String toPrint = "";
@@ -19,5 +19,5 @@ public class Attributes {
         return "Attributes{" +
                 "attributes=" + toPrint +
                 '}';
-    }
+    }*/
 }

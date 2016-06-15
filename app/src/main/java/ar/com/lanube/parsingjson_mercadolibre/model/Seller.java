@@ -10,5 +10,5 @@ public class Seller {
     private String power_seller_status;
     private Boolean car_dealer;
     private Boolean real_estate_agency;
-    private List<Tags> tags;
+    private List<String> tags;
 }

@@ -3,7 +3,7 @@ package ar.com.lanube.parsingjson_mercadolibre.model;
 /**
  * Created by izu on 09/06/2016.
  */
-public class Adress {
+public class Address {
     private String state_id;
     private String state_name;
     private String city_id;
@@ -11,7 +11,7 @@ public class Adress {
 
     @Override
     public String toString() {
-        return "Adress{" +
+        return "Address{" +
                 "state_id='" + state_id + '\'' +
                 ", state_name='" + state_name + '\'' +
                 ", city_id='" + city_id + '\'' +
