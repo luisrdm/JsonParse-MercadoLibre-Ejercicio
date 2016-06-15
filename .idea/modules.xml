@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ParsingJson_MercadoLibre.iml" filepath="$PROJECT_DIR$/ParsingJson_MercadoLibre.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JsonParse-MercadoLibre-Ejercicio.iml" filepath="$PROJECT_DIR$/JsonParse-MercadoLibre-Ejercicio.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
